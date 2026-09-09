@@ -1023,3 +1023,9 @@ body {
     margin: 8px auto 0;
   }
 }
+/* ===== Исправление: тёмный текст + радуга не на буквах ===== */
+.instagram,.instagram h2,.instagram .eyebrow,.instagram p {  color: #173f32 !important;}
+.instagram {  background: #fff3c4 !important;}
+/* На телефоне радугу и облако прячем, чтобы не лезли на заголовок */@media (max-width: 768px) {  .hero::before,  .hero::after {    display: none !important;  }
+  .hero-copy h1,  .hero-copy .lead,  .hero-copy .eyebrow {    position: relative;    z-index: 10;    background: transparent;  }}/* ===== Убрать радугу и облака, цвета оставить ===== */
+.hero::before,.hero::after {  display: none !important;}
