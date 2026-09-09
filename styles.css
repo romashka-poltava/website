@@ -1496,3 +1496,186 @@ footer p {
     line-height: 1.2;
   }
 }
+/* ==================================================
+   MOBILE HERO — COMPACT FINAL LAYOUT
+   ================================================== */
+
+@media (max-width: 760px) {
+
+  /* немного компактнее верх */
+  .hero-copy {
+    padding: 38px 0 18px !important;
+  }
+
+  .hero h1 {
+    font-size: clamp(48px, 13vw, 61px) !important;
+    line-height: .94 !important;
+  }
+
+  .lead {
+    margin-top: 20px !important;
+  }
+
+  .hero-actions {
+    margin-top: 24px !important;
+  }
+
+  .mini-trust {
+    margin-top: 22px !important;
+    margin-bottom: 4px !important;
+  }
+
+
+  /* Главное изменение:
+     картинка становится компактной сценой,
+     а не огромным отдельным экраном */
+
+  .hero-art {
+    position: relative !important;
+
+    height: 285px !important;
+    min-height: 285px !important;
+
+    margin: 6px -16px 0 !important;
+
+    overflow: hidden !important;
+  }
+
+
+  /* солнце */
+
+  .sun {
+    width: 82px !important;
+    height: 82px !important;
+
+    top: 12px !important;
+    right: 28px !important;
+  }
+
+
+  /* задний светлый холм */
+
+  .hill-1 {
+    width: 520px !important;
+    height: 170px !important;
+
+    right: -215px !important;
+    bottom: -35px !important;
+
+    transform: rotate(-4deg) !important;
+  }
+
+
+  /* РОМАШКА:
+     поднимаем и ставим почти по центру */
+
+  .big-daisy {
+    width: 205px !important;
+    height: 205px !important;
+
+    left: 50% !important;
+    right: auto !important;
+
+    bottom: -4px !important;
+
+    transform: translateX(-50%) !important;
+
+    z-index: 7 !important;
+  }
+
+
+  /* передний холм:
+     закрывает основание стебля */
+
+  .hill-2 {
+    width: 590px !important;
+    height: 95px !important;
+
+    left: 50% !important;
+    right: auto !important;
+
+    bottom: -42px !important;
+
+    transform: translateX(-50%) rotate(1deg) !important;
+
+    z-index: 8 !important;
+  }
+
+
+  /* 123 */
+
+  .card-b {
+    width: 112px !important;
+    min-height: 72px !important;
+
+    left: 13px !important;
+    top: 18px !important;
+
+    padding: 12px !important;
+
+    transform: rotate(-5deg) !important;
+
+    z-index: 12 !important;
+  }
+
+  .card-b .numbers {
+    font-size: 23px !important;
+    gap: 4px !important;
+    margin-bottom: 5px !important;
+  }
+
+
+  /* ABC */
+
+  .card-a {
+    width: 108px !important;
+    min-height: 70px !important;
+
+    right: 12px !important;
+    top: 48px !important;
+
+    padding: 12px !important;
+
+    transform: rotate(5deg) !important;
+
+    z-index: 12 !important;
+  }
+
+  .card-a b {
+    font-size: 24px !important;
+  }
+
+
+  /* Ритміка:
+     справа от ромашки, а НЕ на её лице */
+
+  .card-c {
+    width: 94px !important;
+    min-height: 62px !important;
+
+    right: 10px !important;
+    bottom: 18px !important;
+
+    left: auto !important;
+    top: auto !important;
+
+    padding: 10px !important;
+
+    transform: rotate(5deg) !important;
+
+    z-index: 13 !important;
+  }
+
+  .card-c b {
+    font-size: 20px !important;
+    margin-bottom: 2px !important;
+  }
+
+
+  /* подписи карточек */
+
+  .card-float span {
+    font-size: 10px !important;
+    line-height: 1.18 !important;
+  }
+}
