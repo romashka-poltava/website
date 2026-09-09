@@ -1679,3 +1679,93 @@ footer p {
     line-height: 1.18 !important;
   }
 }
+/* ===== FIX DAISY + RHYTHMICS ===== */
+
+/* DESKTOP */
+
+.big-daisy {
+  z-index: 8 !important;
+  width: 400px !important;
+  height: 400px !important;
+  left: 70px !important;
+  right: auto !important;
+  bottom: 5px !important;
+}
+
+/* передний холм должен закрывать только низ стебля */
+.hill-2 {
+  z-index: 6 !important;
+  height: 105px !important;
+  bottom: -48px !important;
+}
+
+/* карточку Ритміка уводим вправо от ромашки */
+.card-c {
+  z-index: 12 !important;
+  width: 135px !important;
+  right: 8px !important;
+  left: auto !important;
+  bottom: 28px !important;
+  top: auto !important;
+  transform: rotate(5deg) !important;
+}
+
+
+/* ===== MOBILE ===== */
+
+@media (max-width: 760px) {
+
+  .hero-art {
+    height: 285px !important;
+    min-height: 285px !important;
+  }
+
+  .big-daisy {
+    z-index: 8 !important;
+
+    width: 195px !important;
+    height: 195px !important;
+
+    left: 42% !important;
+    right: auto !important;
+
+    bottom: 3px !important;
+
+    transform: translateX(-50%) !important;
+  }
+
+  /* холм закрывает только самый низ стебля */
+  .hill-2 {
+    z-index: 6 !important;
+
+    height: 72px !important;
+
+    bottom: -35px !important;
+  }
+
+  /* Ритміка — полностью справа от цветка */
+  .card-c {
+    z-index: 12 !important;
+
+    width: 88px !important;
+    min-height: 58px !important;
+
+    right: 7px !important;
+    left: auto !important;
+
+    bottom: 16px !important;
+    top: auto !important;
+
+    padding: 9px !important;
+
+    transform: rotate(4deg) !important;
+  }
+
+  .card-c b {
+    font-size: 19px !important;
+  }
+
+  .card-c span {
+    font-size: 9px !important;
+  }
+}
