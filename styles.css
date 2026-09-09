@@ -875,3 +875,113 @@ footer p {
     height: 112px;
   }
 }
+/* ===== Яркий детский фон, ромашка без изменений ===== */
+
+body {
+  background:
+    radial-gradient(circle at 12% 8%, #fff4a8 0 90px, transparent 91px),
+    radial-gradient(circle at 92% 18%, #c9f0ff 0 120px, transparent 121px),
+    linear-gradient(180deg, #e8f7ff 0%, #fff8d6 40%, #e9f8c8 100%);
+}
+
+/* Небо + радуга в первом экране */
+.hero {
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(180deg, #9ad8ff 0%, #c8ecff 28%, #fff3a6 70%, #b6e37a 100%) !important;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  left: 6%;
+  top: -40px;
+  width: 340px;
+  height: 170px;
+  border-radius: 0 0 50% 50%;
+  background:
+    radial-gradient(circle at 50% 0,
+      transparent 58px,
+      #ff5b5b 59px 68px,
+      #ff9a3c 69px 78px,
+      #ffe14a 79px 88px,
+      #7be36a 89px 98px,
+      #5ab0ff 99px 108px,
+      #b07cff 109px 118px,
+      transparent 119px);
+  opacity: 0.9;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  background:
+    radial-gradient(circle at 18% 22%, #fff 0 28px, transparent 29px),
+    radial-gradient(circle at 22% 20%, #fff 0 40px, transparent 41px),
+    radial-gradient(circle at 27% 23%, #fff 0 26px, transparent 27px),
+    radial-gradient(circle at 72% 12%, #fff 0 22px, transparent 23px),
+    radial-gradient(circle at 76% 11%, #fff 0 34px, transparent 35px),
+    radial-gradient(circle at 81% 13%, #fff 0 20px, transparent 21px);
+}
+
+.hero .container,
+.hero-copy,
+.hero-art {
+  position: relative;
+  z-index: 2;
+}
+
+/* Солнце ярче */
+.sun {
+  background: radial-gradient(circle, #ffe36a 0%, #ffc107 70%, #ff9800 100%) !important;
+  box-shadow: 0 0 40px rgba(255, 193, 7, 0.55);
+}
+
+/* Холмы как трава */
+.hill-1,
+.hill-2 {
+  background: linear-gradient(180deg, #8ed56a 0%, #5dae45 100%) !important;
+}
+
+/* Карточки поверх фона — белые и читаемые */
+.card-float,
+.program-card,
+.contact-card {
+  background: #fff;
+  position: relative;
+  z-index: 2;
+}
+
+.section.soft {
+  background:
+    radial-gradient(circle at 90% 20%, #ffe27a 0 80px, transparent 81px),
+    #e9f8d6;
+}
+
+.section.instagram {
+  background:
+    linear-gradient(135deg, #ffe27a 0%, #ffd0e6 50%, #c9ecff 100%);
+}
+
+.contacts {
+  background:
+    linear-gradient(180deg, #e7f6ff 0%, #fff8d4 100%);
+}
+
+/* На телефоне радуга чуть меньше, чтобы не мешала тексту */
+@media (max-width: 768px) {
+  .hero::before {
+    left: auto;
+    right: -30px;
+    top: -20px;
+    width: 220px;
+    height: 110px;
+    opacity: 0.7;
+  }
+}
