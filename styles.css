@@ -158,9 +158,8 @@ footer{padding:30px 0;border-top:1px solid var(--line);background:#fbf8ee}
   .contact-card{padding:22px}
 }
 .big-daisy{
-  background: url("Screenshot_20260909_111309_Gallery.jpg") center/contain no-repeat !important;
+background: url("romashka-clean.png") center/contain no-repeat !important;
 }
-
 .big-daisy .d,
 .big-daisy span{
   display:none !important;
