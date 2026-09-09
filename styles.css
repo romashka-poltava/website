@@ -876,36 +876,78 @@ footer p {
   }
 }
 
-/* ===== ИСПРАВЛЕННЫЙ БЛОК: яркий фон без радуги и облаков ===== */
-
-body {
-  background: linear-gradient(180deg, #e8f7ff 0%, #fff8d6 45%, #e9f8c8 100%);
-}
+/* ===== Макет: кремовая гамма, карточки вокруг ромашки ===== */
 
 .hero {
-  position: relative;
-  overflow: hidden;
-  background: linear-gradient(180deg, #9ad8ff 0%, #c8ecff 28%, #fff3a6 68%, #b6e37a 100%) !important;
+  background:
+    radial-gradient(circle at 82% 18%, rgba(255, 224, 90, 0.55) 0 90px, transparent 91px),
+    linear-gradient(180deg, #fffdf6 0%, #fff6d4 48%, #eaf6c8 100%) !important;
 }
 
 .hero::before,
 .hero::after {
   content: none !important;
   display: none !important;
-  background: none !important;
 }
 
 .sun {
-  background: radial-gradient(circle, #ffe36a 0%, #ffc107 75%) !important;
+  top: 28px !important;
+  right: 36px !important;
+  width: 170px !important;
+  height: 170px !important;
+  background: radial-gradient(circle, #ffe56a 0%, #f5c431 78%) !important;
+  z-index: 1 !important;
 }
 
-.hill-1,
-.hill-2 {
-  background: linear-gradient(180deg, #8ed56a 0%, #5dae45 100%) !important;
+.big-daisy {
+  left: 52% !important;
+  bottom: -8px !important;
+  width: 360px !important;
+  height: 360px !important;
+  transform: translateX(-50%) !important;
+  z-index: 5 !important;
+}
+
+.card-float {
+  z-index: 8 !important;
+  background: #fff !important;
+}
+
+/* 123 — слева сверху от цветка */
+.card-b {
+  top: 56px !important;
+  left: 8% !important;
+  right: auto !important;
+  bottom: auto !important;
+  width: 168px !important;
+  transform: rotate(-7deg) !important;
+}
+
+/* ABC — справа сверху, не на солнце */
+.card-a {
+  top: 118px !important;
+  right: 0 !important;
+  left: auto !important;
+  bottom: auto !important;
+  width: 150px !important;
+  transform: rotate(6deg) !important;
+}
+
+/* Ритміка — справа внизу от цветка */
+.card-c {
+  top: auto !important;
+  right: 18px !important;
+  left: auto !important;
+  bottom: 42px !important;
+  width: 132px !important;
+  transform: rotate(5deg) !important;
+}
+
+.section.soft {
+  background: #f3f8ec !important;
 }
 
 .instagram,
-.section.instagram,
 .instagram h2,
 .instagram .eyebrow,
 .instagram p {
@@ -914,59 +956,100 @@ body {
 
 .instagram,
 .section.instagram {
-  background: #fff3c4 !important;
+  background: #fff4c4 !important;
 }
 
-.contacts {
-  background: linear-gradient(180deg, #e7f6ff, #fff8d4);
-}
-
-.section.soft {
-  background: #e9f8d6;
-}
-
-.card-float,
-.program-card,
-.contact-card {
-  background: #fff;
+.program-grid {
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 16px !important;
 }
 
 .program-card {
-  padding: 18px 20px;
-  text-align: left;
+  min-height: 200px !important;
+  padding: 22px 20px !important;
+  background: #fff !important;
 }
 
-.program-card h3 {
-  margin: 8px 0 6px;
-}
-
-.program-card p {
-  margin: 0;
-  line-height: 1.45;
+@media (max-width: 1100px) {
+  .program-grid,
+  .benefits {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
 }
 
 @media (max-width: 768px) {
-  .hero::before,
-  .hero::after {
-    display: none !important;
-    content: none !important;
+  .hero {
+    background: linear-gradient(180deg, #fffdf6 0%, #fff6d4 52%, #eaf6c8 100%) !important;
   }
 
-  .hero-copy h1 {
-    font-size: 34px;
-    line-height: 1.15;
-    padding-right: 0;
+  .hero-art {
+    height: 260px !important;
+    min-height: 260px !important;
+    margin: 8px 0 0 !important;
+    overflow: hidden !important;
   }
 
-  .lead {
-    font-size: 16px !important;
+  .sun {
+    top: 8px !important;
+    right: 12px !important;
+    width: 72px !important;
+    height: 72px !important;
+    z-index: 1 !important;
   }
 
-  .hero-actions .btn {
-    font-size: 15px !important;
+  .big-daisy {
+    left: 50% !important;
+    bottom: 4px !important;
+    width: 168px !important;
+    height: 168px !important;
+    transform: translateX(-50%) !important;
+    z-index: 5 !important;
   }
 
+  .card-float {
+    padding: 8px 10px !important;
+    transform: none !important;
+  }
+
+  .card-float span {
+    font-size: 11px !important;
+  }
+
+  .card-b {
+    top: auto !important;
+    bottom: 150px !important;
+    left: 10px !important;
+    right: auto !important;
+    width: 108px !important;
+    transform: rotate(-6deg) !important;
+  }
+
+  .card-a {
+    top: auto !important;
+    bottom: 150px !important;
+    right: 10px !important;
+    left: auto !important;
+    width: 100px !important;
+    transform: rotate(6deg) !important;
+  }
+
+  .card-c {
+    top: auto !important;
+    bottom: 16px !important;
+    right: 12px !important;
+    left: auto !important;
+    width: 92px !important;
+    transform: rotate(4deg) !important;
+  }
+
+  .program-grid,
+  .benefits {
+    grid-template-columns: 1fr !important;
+  }
+
+  .lead,
+  .hero-actions .btn,
   .mini-trust {
-    font-size: 13px !important;
+    font-size: 15px !important;
   }
 }
