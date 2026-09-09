@@ -875,30 +875,26 @@ footer p {
     height: 112px;
   }
 }
-/* ===== Яркий детский фон, ромашка без изменений ===== */
+/* ===== Фон яркий, текст не перекрывается ===== */
 
 body {
-  background:
-    radial-gradient(circle at 12% 8%, #fff4a8 0 90px, transparent 91px),
-    radial-gradient(circle at 92% 18%, #c9f0ff 0 120px, transparent 121px),
-    linear-gradient(180deg, #e8f7ff 0%, #fff8d6 40%, #e9f8c8 100%);
+  background: linear-gradient(180deg, #e8f7ff 0%, #fff8d6 45%, #e9f8c8 100%);
 }
 
-/* Небо + радуга в первом экране */
 .hero {
   position: relative;
   overflow: hidden;
-  background:
-    linear-gradient(180deg, #9ad8ff 0%, #c8ecff 28%, #fff3a6 70%, #b6e37a 100%) !important;
+  background: linear-gradient(180deg, #9ad8ff 0%, #c8ecff 28%, #fff3a6 68%, #b6e37a 100%) !important;
 }
 
+/* Радуга и облака ТОЛЬКО справа и ниже заголовка */
 .hero::before {
   content: "";
   position: absolute;
-  left: 6%;
-  top: -40px;
-  width: 340px;
-  height: 170px;
+  right: -40px;
+  top: 8px;
+  width: 280px;
+  height: 150px;
   border-radius: 0 0 50% 50%;
   background:
     radial-gradient(circle at 50% 0,
@@ -910,78 +906,120 @@ body {
       #5ab0ff 99px 108px,
       #b07cff 109px 118px,
       transparent 119px);
-  opacity: 0.9;
+  opacity: 0.85;
   pointer-events: none;
-  z-index: 1;
+  z-index: 0;
 }
 
 .hero::after {
   content: "";
   position: absolute;
-  inset: 0;
+  right: 18px;
+  top: 28px;
+  width: 90px;
+  height: 50px;
+  border-radius: 40px;
+  background: #fff;
+  box-shadow:
+    28px 8px 0 6px #fff,
+    -22px 10px 0 2px #fff;
   pointer-events: none;
-  z-index: 1;
-  background:
-    radial-gradient(circle at 18% 22%, #fff 0 28px, transparent 29px),
-    radial-gradient(circle at 22% 20%, #fff 0 40px, transparent 41px),
-    radial-gradient(circle at 27% 23%, #fff 0 26px, transparent 27px),
-    radial-gradient(circle at 72% 12%, #fff 0 22px, transparent 23px),
-    radial-gradient(circle at 76% 11%, #fff 0 34px, transparent 35px),
-    radial-gradient(circle at 81% 13%, #fff 0 20px, transparent 21px);
+  z-index: 0;
+  opacity: 0.95;
 }
 
-.hero .container,
+/* Текст и кнопки ВСЕГДА поверх декора */
 .hero-copy,
-.hero-art {
+.hero-art,
+.hero .container {
   position: relative;
-  z-index: 2;
+  z-index: 3;
 }
 
-/* Солнце ярче */
+.hero-copy {
+  max-width: 640px;
+}
+
+.hero-copy h1,
+.hero-copy .lead,
+.hero-copy .eyebrow,
+.mini-trust {
+  position: relative;
+  z-index: 4;
+  text-shadow: 0 1px 0 rgba(255,255,255,.7);
+}
+
 .sun {
-  background: radial-gradient(circle, #ffe36a 0%, #ffc107 70%, #ff9800 100%) !important;
-  box-shadow: 0 0 40px rgba(255, 193, 7, 0.55);
+  background: radial-gradient(circle, #ffe36a 0%, #ffc107 75%) !important;
+  z-index: 1;
 }
 
-/* Холмы как трава */
 .hill-1,
 .hill-2 {
   background: linear-gradient(180deg, #8ed56a 0%, #5dae45 100%) !important;
 }
 
-/* Карточки поверх фона — белые и читаемые */
 .card-float,
 .program-card,
 .contact-card {
   background: #fff;
-  position: relative;
-  z-index: 2;
+  z-index: 4;
 }
 
-.section.soft {
-  background:
-    radial-gradient(circle at 90% 20%, #ffe27a 0 80px, transparent 81px),
-    #e9f8d6;
-}
+.section.soft { background: #e9f8d6; }
+.section.instagram { background: linear-gradient(135deg, #ffe27a, #ffd0e6 50%, #c9ecff); }
+.contacts { background: linear-gradient(180deg, #e7f6ff, #fff8d4); }
 
-.section.instagram {
-  background:
-    linear-gradient(135deg, #ffe27a 0%, #ffd0e6 50%, #c9ecff 100%);
-}
-
-.contacts {
-  background:
-    linear-gradient(180deg, #e7f6ff 0%, #fff8d4 100%);
-}
-
-/* На телефоне радуга чуть меньше, чтобы не мешала тексту */
+/* Телефон: радуга маленькая справа, карточки не вылезают */
 @media (max-width: 768px) {
+  .hero {
+    padding-bottom: 24px;
+  }
+
   .hero::before {
-    left: auto;
-    right: -30px;
-    top: -20px;
-    width: 220px;
-    height: 110px;
+    right: -70px;
+    top: 0;
+    width: 190px;
+    height: 100px;
+    opacity: 0.55;
+  }
+
+  .hero::after {
+    right: 8px;
+    top: 18px;
+    width: 54px;
+    height: 32px;
     opacity: 0.7;
+  }
+
+  .hero-copy {
+    max-width: 100%;
+    padding-right: 0;
+  }
+
+  .hero-copy h1 {
+    font-size: 34px;
+    line-height: 1.12;
+    margin-right: 0;
+  }
+
+  .hero-art {
+    margin-top: 12px;
+    overflow: hidden;
+  }
+
+  .card-float {
+    position: relative !important;
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    bottom: auto !important;
+    transform: none !important;
+    margin: 8px 8px 0 0;
+    display: inline-flex;
+  }
+
+  .big-daisy {
+    margin: 8px auto 0;
   }
 }
