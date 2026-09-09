@@ -1092,3 +1092,407 @@ footer p {
     width: 105px;
   }
 }
+/* ==================================================
+   HERO — FINAL COMPOSITION FIX
+   ================================================== */
+
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Две половины первого экрана */
+.hero-grid {
+  display: grid;
+  grid-template-columns: 52% 48%;
+  gap: 0;
+  min-height: 610px;
+  align-items: stretch;
+}
+
+/* Текст слева */
+.hero-copy {
+  position: relative;
+  z-index: 20;
+  padding: 52px 40px 52px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Правая иллюстрация */
+.hero-art {
+  position: relative;
+  height: 610px;
+  min-height: 610px;
+  overflow: hidden;
+}
+
+
+/* ---------- СОЛНЦЕ ---------- */
+
+.sun {
+  position: absolute;
+  z-index: 1;
+
+  width: 165px;
+  height: 165px;
+
+  top: 35px;
+  right: 65px;
+
+  border-radius: 50%;
+  background: linear-gradient(145deg,#ffe87a,#f6c934);
+}
+
+
+/* ---------- ЗАДНИЙ ХОЛМ ---------- */
+
+.hill-1 {
+  position: absolute;
+  z-index: 2;
+
+  width: 820px;
+  height: 310px;
+
+  right: -250px;
+  bottom: -45px;
+
+  border-radius: 55% 45% 0 0;
+  background: #b8dc91;
+
+  transform: rotate(-5deg);
+}
+
+
+/* ---------- РОМАШКА ---------- */
+
+.big-daisy {
+  position: absolute !important;
+  z-index: 4 !important;
+
+  width: 410px !important;
+  height: 410px !important;
+
+  left: 70px !important;
+  right: auto !important;
+
+  bottom: -18px !important;
+
+  background: transparent !important;
+}
+
+.big-daisy img {
+  display: block !important;
+
+  width: 100% !important;
+  height: 100% !important;
+
+  object-fit: contain !important;
+
+  background: transparent !important;
+  border: none !important;
+}
+
+
+/*
+   ВАЖНО:
+   этот холм теперь идёт ПЕРЕД нижней частью стебля.
+   Благодаря этому ромашка выглядит так,
+   будто растёт из пейзажа.
+*/
+
+.hill-2 {
+  position: absolute;
+  z-index: 5;
+
+  width: 900px;
+  height: 175px;
+
+  left: -100px;
+  right: auto;
+
+  bottom: -80px;
+
+  border-radius: 50% 50% 0 0;
+  background: #72b573;
+
+  transform: rotate(2deg);
+}
+
+
+/* ==================================================
+   КАРТОЧКИ
+   ================================================== */
+
+.card-float {
+  position: absolute;
+  z-index: 10;
+
+  padding: 18px 20px;
+
+  background: rgba(255,255,255,.95);
+  border-radius: 22px;
+
+  box-shadow: 0 14px 35px rgba(42,70,52,.12);
+}
+
+
+/* 1 2 3 */
+
+.card-b {
+  width: 180px;
+
+  left: 5px !important;
+  top: 75px !important;
+
+  right: auto !important;
+  bottom: auto !important;
+
+  transform: rotate(-6deg) !important;
+}
+
+
+/* ABC */
+
+.card-a {
+  width: 175px;
+
+  right: 0 !important;
+  top: 135px !important;
+
+  left: auto !important;
+  bottom: auto !important;
+
+  transform: rotate(5deg) !important;
+}
+
+
+/* РИТМІКА
+   УБИРАЕМ С ЛИЦА РОМАШКИ */
+
+.card-c {
+  width: 145px !important;
+  min-height: 95px !important;
+
+  right: 0 !important;
+  bottom: 45px !important;
+
+  left: auto !important;
+  top: auto !important;
+
+  padding: 17px !important;
+
+  transform: rotate(5deg) !important;
+  z-index: 11 !important;
+}
+
+.card-c b {
+  margin-bottom: 5px;
+  color: #087054;
+  font-size: 30px;
+}
+
+
+/* ==================================================
+   РАЗНОЦВЕТНЫЕ 1 2 3
+   ================================================== */
+
+.card-b .numbers {
+  display: flex;
+  gap: 7px;
+
+  margin-bottom: 8px;
+
+  font-size: 34px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.card-b .n1 {
+  color: #168bd2;
+}
+
+.card-b .n2 {
+  color: #f1a51c;
+}
+
+.card-b .n3 {
+  color: #e94040;
+}
+
+
+/* ==================================================
+   TABLET
+   ================================================== */
+
+@media (max-width: 1100px) {
+
+  .hero-grid {
+    grid-template-columns: 53% 47%;
+  }
+
+  .hero-art {
+    height: 590px;
+    min-height: 590px;
+  }
+
+  .big-daisy {
+    width: 350px !important;
+    height: 350px !important;
+
+    left: 35px !important;
+    bottom: -10px !important;
+  }
+
+  .card-b {
+    left: 0 !important;
+    top: 65px !important;
+  }
+
+  .card-a {
+    right: 0 !important;
+    top: 145px !important;
+  }
+
+  .card-c {
+    right: 0 !important;
+    bottom: 35px !important;
+  }
+}
+
+
+/* ==================================================
+   MOBILE
+   ================================================== */
+
+@media (max-width: 760px) {
+
+  .hero-grid {
+    display: block;
+    min-height: auto;
+  }
+
+  .hero-copy {
+    padding: 42px 0 24px;
+  }
+
+  /*
+     Здесь картинка становится цельной
+     отдельной сценой под текстом.
+  */
+
+  .hero-art {
+    position: relative;
+
+    height: 360px !important;
+    min-height: 360px !important;
+
+    margin: 0 -16px;
+
+    overflow: hidden;
+  }
+
+
+  /* солнце */
+
+  .sun {
+    width: 100px;
+    height: 100px;
+
+    top: 22px;
+    right: 24px;
+  }
+
+
+  /* задний холм */
+
+  .hill-1 {
+    width: 550px;
+    height: 215px;
+
+    right: -220px;
+    bottom: -30px;
+  }
+
+
+  /* ромашка */
+
+  .big-daisy {
+    width: 245px !important;
+    height: 245px !important;
+
+    left: 38px !important;
+    right: auto !important;
+
+    bottom: -6px !important;
+  }
+
+
+  /* передний холм закрывает низ стебля */
+
+  .hill-2 {
+    width: 600px;
+    height: 115px;
+
+    left: -120px;
+    bottom: -55px;
+
+    z-index: 5;
+  }
+
+
+  /* 123 */
+
+  .card-b {
+    width: 120px !important;
+
+    left: 8px !important;
+    top: 12px !important;
+
+    padding: 13px !important;
+  }
+
+  .card-b .numbers {
+    gap: 4px;
+
+    font-size: 25px;
+  }
+
+
+  /* ABC */
+
+  .card-a {
+    width: 118px !important;
+
+    right: 5px !important;
+    top: 55px !important;
+
+    padding: 13px !important;
+  }
+
+
+  /* Ритміка:
+     справа внизу, НЕ на цветке */
+
+  .card-c {
+    width: 105px !important;
+    min-height: 72px !important;
+
+    right: 5px !important;
+    bottom: 18px !important;
+
+    padding: 12px !important;
+
+    z-index: 12 !important;
+  }
+
+  .card-c b {
+    font-size: 23px;
+  }
+
+  .card-float span {
+    font-size: 11px;
+    line-height: 1.2;
+  }
+}
