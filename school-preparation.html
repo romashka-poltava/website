@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Підготовка дитини до школи на Леваді у Полтаві | РОМАШКА</title>
+
+  <meta name="description" content="Підготовка дітей до школи та 1 класу на Леваді у Полтаві. Заняття для майбутніх школярів в освітньому просторі «РОМАШКА», вул. Чураївни, 5.">
+
+  <link rel="canonical" href="https://romashka.poltava.ua/school-preparation.html">
+
+  <style>
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #18392d;
+      background: #fffdf7;
+      line-height: 1.6;
+    }
+
+    a { color: inherit; }
+
+    .header {
+      background: rgba(255,255,255,.96);
+      border-bottom: 1px solid #e9e6dc;
+    }
+
+    .header-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 18px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .brand img {
+      width: 52px;
+      height: 52px;
+      object-fit: contain;
+    }
+
+    .brand-name {
+      font-size: 24px;
+      letter-spacing: 4px;
+      color: #111;
+      font-weight: 700;
+    }
+
+    .brand-subtitle {
+      display: block;
+      font-size: 13px;
+      letter-spacing: 0;
+      color: #66716c;
+      font-weight: 400;
+      margin-top: 2px;
+    }
+
+    .nav {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .nav a {
+      text-decoration: none;
+      font-weight: 700;
+      color: #222;
+    }
+
+    .nav a:hover { color: #176448; }
+
+    .hero {
+      background:
+        radial-gradient(circle at 88% 18%, #f4c629 0 90px, transparent 91px),
+        linear-gradient(135deg, #fffaf0 0%, #f6f4dc 55%, #e7f1d8 100%);
+    }
+
+    .hero-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 75px 24px 85px;
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 55px;
+      align-items: center;
+    }
+
+    .location {
+      display: inline-block;
+      font-weight: 800;
+      color: #176448;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(42px, 6vw, 72px);
+      line-height: 1.04;
+      margin: 0 0 25px;
+      color: #173d2e;
+      letter-spacing: -2px;
+    }
+
+    .lead {
+      font-size: 20px;
+      max-width: 700px;
+      color: #40564e;
+      margin-bottom: 30px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 14px 26px;
+      background: #176448;
+      color: white;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 800;
+    }
+
+    .numbers-card {
+      background: white;
+      padding: 42px;
+      border-radius: 30px;
+      box-shadow: 0 18px 50px rgba(35,70,53,.10);
+      transform: rotate(2deg);
+    }
+
+    .numbers {
+      font-size: 70px;
+      line-height: 1;
+      font-weight: 800;
+      margin-bottom: 18px;
+    }
+
+    .n1 { color: #1772b8; }
+    .n2 { color: #d04a3d; }
+    .n3 { color: #e3a900; }
+
+    .numbers-card p {
+      font-size: 20px;
+      margin: 0;
+    }
+
+    .section {
+      padding: 80px 24px;
+    }
+
+    .container {
+      max-width: 1050px;
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      color: #176448;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+
+    h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(34px, 4vw, 50px);
+      line-height: 1.1;
+      margin: 0 0 25px;
+      color: #173d2e;
+    }
+
+    .text {
+      font-size: 18px;
+      color: #40564e;
+      max-width: 850px;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      margin-top: 45px;
+    }
+
+    .feature {
+      background: #f3f6e9;
+      border-radius: 24px;
+      padding: 28px;
+    }
+
+    .feature strong {
+      display: block;
+      font-size: 20px;
+      margin-bottom: 8px;
+      color: #173d2e;
+    }
+
+    .teacher-section {
+      background: #edf4e5;
+    }
+
+    .teacher-wrap {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 45px;
+      margin-top: 40px;
+      align-items: center;
+    }
+
+    .teacher-photo {
+      background: white;
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: 0 12px 35px rgba(35,70,53,.08);
+    }
+
+    .teacher-photo img {
+      width: 100%;
+      display: block;
+    }
+
+    .teacher-info h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 34px;
+      margin: 0 0 8px;
+      color: #173d2e;
+    }
+
+    .role {
+      font-size: 19px;
+      font-weight: 700;
+      color: #176448;
+      margin-bottom: 20px;
+    }
+
+    .location-section {
+      text-align: center;
+      background: #173d2e;
+      color: white;
+    }
+
+    .location-section h2 { color: white; }
+
+    .location-section .text {
+      color: #e6eee9;
+      margin: 0 auto 30px;
+    }
+
+    .location-section .button {
+      background: white;
+      color: #173d2e;
+    }
+
+    footer {
+      padding: 30px 24px;
+      text-align: center;
+      color: #68746f;
+      background: white;
+      font-size: 14px;
+    }
+
+    @media (max-width: 800px) {
+      .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav {
+        gap: 14px;
+        font-size: 14px;
+      }
+
+      .hero-inner,
+      .teacher-wrap {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-inner { padding-top: 50px; }
+
+      .numbers-card { max-width: 330px; }
+
+      .features { grid-template-columns: 1fr; }
+
+      h1 { letter-spacing: -1px; }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "Освітній простір РОМАШКА",
+    "url": "https://romashka.poltava.ua/",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "вул. Чураївни, 5",
+      "addressLocality": "Полтава",
+      "addressRegion": "Полтавська область",
+      "addressCountry": "UA"
+    }
+  }
+  </script>
+</head>
+
+<body>
+
+<header class="header">
+  <div class="header-inner">
+
+    <a class="brand" href="index.html">
+      <img src="romashka-clean.png" alt="Освітній простір РОМАШКА">
+      <div>
+        <span class="brand-name">РОМАШКА</span>
+        <span class="brand-subtitle">освітній простір · Полтава</span>
+      </div>
+    </a>
+
+    <nav class="nav">
+      <a href="index.html">Головна</a>
+      <a href="index.html#programs">Напрями</a>
+      <a href="team.html">Наша команда</a>
+      <a href="index.html#contacts">Контакти</a>
+    </nav>
+
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="hero-inner">
+
+      <div>
+        <div class="location">Полтава · Левада · вул. Чураївни, 5</div>
+
+        <h1>Підготовка дитини до школи на Леваді</h1>
+
+        <p class="lead">
+          Заняття для майбутніх школярів у Полтаві —
+          в освітньому просторі «РОМАШКА» на Леваді.
+        </p>
+
+        <a class="button" href="tel:+380502146665">
+          Записатися на заняття
+        </a>
+      </div>
+
+      <div class="numbers-card">
+        <div class="numbers">
+          <span class="n1">1</span>
+          <span class="n2">2</span>
+          <span class="n3">3</span>
+        </div>
+
+        <p>
+          Підготовка<br>
+          <strong>до школи</strong>
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <section class="section">
+    <div class="container">
+
+      <div class="eyebrow">Підготовка до школи · Левада · Полтава</div>
+
+      <h2>Готуємо дитину до нового етапу</h2>
+
+      <div class="text">
+        <p>
+          Шукаєте, де підготувати дитину до школи на Леваді?
+          В освітньому просторі «РОМАШКА» у Полтаві проходять
+          заняття з підготовки дітей до школи та майбутнього 1 класу.
+        </p>
+
+        <p>
+          Ми знаходимося на Леваді за адресою:
+          <strong>м. Полтава, вул. Чураївни, 5.</strong>
+          Дитина може готуватися до школи поруч із домом
+          у комфортному дитячому просторі.
+        </p>
+      </div>
+
+      <div class="features">
+
+        <div class="feature">
+          <strong>Майбутнім школярам</strong>
+          Заняття, спрямовані на підготовку дитини до початку навчання у школі.
+        </div>
+
+        <div class="feature">
+          <strong>Левада</strong>
+          Освітній простір знаходиться на вул. Чураївни, 5 у Полтаві.
+        </div>
+
+  <div class="feature">
+    <strong>Читання та письмо</strong>
+    Підготовка майбутніх першокласників до читання, письма та навчальних завдань.
+  </div>
+
+  <div class="feature">
+    <strong>Увага та мислення</strong>
+    Завдання для розвитку уваги, мислення та навичок, необхідних майбутньому школяреві.
+  </div>
+
+  <div class="feature">
+    <strong>Навчальні навички</strong>
+    Поступова підготовка дитини до навчального формату та майбутнього 1 класу.
+  </div>
+
+</div>
+        
+  </section>
+
+
+  <section class="section teacher-section">
+    <div class="container">
+
+      <div class="eyebrow">Наша команда</div>
+
+      <h2>Педагоги освітнього простору</h2>
+
+      <div class="teacher-wrap">
+
+        <div class="teacher-photo">
+          <img
+            src="nataliia-khvostenko.jpg"
+            alt="Наталія Хвостенко — вчитель початкових класів, підготовка дітей до школи на Леваді у Полтаві"
+          >
+        </div>
+
+        <div class="teacher-info">
+
+          <h3>Наталія Хвостенко</h3>
+
+          <div class="role">Вчитель початкових класів</div>
+
+          <div class="text">
+            <p>
+              В освітньому просторі «РОМАШКА» з дітьми працюють
+              педагоги, які допомагають їм знайомитися з навчанням
+              у комфортному та доброзичливому середовищі.
+            </p>
+          </div>
+
+          <a class="button" href="team.html">
+            Познайомитися з командою
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <section class="section">
+    <div class="container">
+
+      <div class="eyebrow">Підготовка дитини до 1 класу · Левада</div>
+
+      <h2>Підготовка до школи поруч із домом</h2>
+
+      <div class="text">
+        <p>
+          Якщо ви живете на Леваді та шукаєте заняття для підготовки
+          дитини до школи, освітній простір «РОМАШКА» знаходиться
+          безпосередньо у районі Левада.
+        </p>
+
+        <p>
+          Адреса:
+          <strong>Полтава, Левада, вул. Чураївни, 5.</strong>
+          Щоб дізнатися про актуальні групи, розклад та запис,
+          зв’яжіться з освітнім простором.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <section class="section location-section">
+    <div class="container">
+
+      <div class="eyebrow" style="color:#dce9c8;">
+        Підготовка до школи на Леваді
+      </div>
+
+      <h2>Полтава · Левада · вул. Чураївни, 5</h2>
+
+      <p class="text">
+        Освітній простір «РОМАШКА»<br>
+        Заняття з підготовки дітей до школи
+      </p>
+
+      <a class="button" href="tel:+380502146665">
+        Дізнатися про запис
+      </a>
+
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  © Освітній простір «РОМАШКА» · Полтава · Левада
+</footer>
+
+</body>
+</html>
