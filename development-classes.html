@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Розвивальні заняття для дітей на Леваді | Полтава</title>
+
+  <meta name="description" content="Розвивальні заняття для дітей та дошкільнят на Леваді у Полтаві: літери, математика, логіка, дрібна моторика та розвиток пізнавальних навичок. Освітній простір «РОМАШКА», вул. Чураївни, 5.">
+
+  <link rel="canonical" href="https://romashka.poltava.ua/development-classes.html">
+
+  <style>
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #18392d;
+      background: #fffdf7;
+      line-height: 1.6;
+    }
+
+    a { color: inherit; }
+
+    .header {
+      background: rgba(255,255,255,.96);
+      border-bottom: 1px solid #e9e6dc;
+    }
+
+    .header-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 18px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .brand img {
+      width: 52px;
+      height: 52px;
+      object-fit: contain;
+    }
+
+    .brand-name {
+      font-size: 24px;
+      letter-spacing: 4px;
+      color: #111;
+      font-weight: 700;
+    }
+
+    .brand-subtitle {
+      display: block;
+      font-size: 13px;
+      letter-spacing: 0;
+      color: #66716c;
+      font-weight: 400;
+      margin-top: 2px;
+    }
+
+    .nav {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .nav a {
+      text-decoration: none;
+      font-weight: 700;
+      color: #222;
+    }
+
+    .nav a:hover { color: #176448; }
+
+    .hero {
+      background:
+        radial-gradient(circle at 88% 18%, #f4c629 0 90px, transparent 91px),
+        linear-gradient(135deg, #fffaf0 0%, #f6f4dc 55%, #e7f1d8 100%);
+    }
+
+    .hero-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 75px 24px 85px;
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 55px;
+      align-items: center;
+    }
+
+    .location {
+      display: inline-block;
+      font-weight: 800;
+      color: #176448;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(42px, 6vw, 72px);
+      line-height: 1.04;
+      margin: 0 0 25px;
+      color: #173d2e;
+      letter-spacing: -2px;
+    }
+
+    .lead {
+      font-size: 20px;
+      max-width: 700px;
+      color: #40564e;
+      margin-bottom: 30px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 14px 26px;
+      background: #176448;
+      color: white;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 800;
+    }
+
+    .learning-card {
+      background: white;
+      padding: 42px;
+      border-radius: 30px;
+      box-shadow: 0 18px 50px rgba(35,70,53,.10);
+      transform: rotate(2deg);
+    }
+
+    .learning-icon {
+      font-size: 62px;
+      line-height: 1;
+      margin-bottom: 18px;
+    }
+
+    .learning-card p {
+      font-size: 20px;
+      margin: 0;
+    }
+
+    .section {
+      padding: 80px 24px;
+    }
+
+    .container {
+      max-width: 1050px;
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      color: #176448;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+
+    h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(34px, 4vw, 50px);
+      line-height: 1.1;
+      margin: 0 0 25px;
+      color: #173d2e;
+    }
+
+    .text {
+      font-size: 18px;
+      color: #40564e;
+      max-width: 850px;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      margin-top: 45px;
+    }
+
+    .feature {
+      background: #f3f6e9;
+      border-radius: 24px;
+      padding: 28px;
+    }
+
+    .feature strong {
+      display: block;
+      font-size: 20px;
+      margin-bottom: 8px;
+      color: #173d2e;
+    }
+
+    .development-section {
+      background: #edf4e5;
+    }
+
+    .development-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+      margin-top: 35px;
+    }
+
+    .development-item {
+      background: white;
+      border-radius: 24px;
+      padding: 28px;
+      box-shadow: 0 10px 30px rgba(35,70,53,.06);
+    }
+
+    .development-item strong {
+      display: block;
+      font-size: 21px;
+      margin-bottom: 8px;
+      color: #173d2e;
+    }
+
+    .location-section {
+      text-align: center;
+      background: #173d2e;
+      color: white;
+    }
+
+    .location-section h2 { color: white; }
+
+    .location-section .text {
+      color: #e6eee9;
+      margin: 0 auto 30px;
+    }
+
+    .location-section .button {
+      background: white;
+      color: #173d2e;
+    }
+
+    footer {
+      padding: 30px 24px;
+      text-align: center;
+      color: #68746f;
+      background: white;
+      font-size: 14px;
+    }
+
+    @media (max-width: 800px) {
+      .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav {
+        gap: 14px;
+        font-size: 14px;
+      }
+
+      .hero-inner {
+        grid-template-columns: 1fr;
+        padding-top: 50px;
+      }
+
+      .features,
+      .development-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .learning-card {
+        max-width: 330px;
+      }
+
+      h1 { letter-spacing: -1px; }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "Освітній простір РОМАШКА",
+    "url": "https://romashka.poltava.ua/",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "вул. Чураївни, 5",
+      "addressLocality": "Полтава",
+      "addressRegion": "Полтавська область",
+      "addressCountry": "UA"
+    }
+  }
+  </script>
+
+</head>
+
+<body>
+
+<header class="header">
+  <div class="header-inner">
+
+    <a class="brand" href="index.html">
+      <img src="romashka-clean.png" alt="Освітній простір РОМАШКА">
+
+      <div>
+        <span class="brand-name">РОМАШКА</span>
+        <span class="brand-subtitle">освітній простір · Полтава</span>
+      </div>
+    </a>
+
+    <nav class="nav">
+      <a href="index.html">Головна</a>
+      <a href="index.html#programs">Напрями</a>
+      <a href="team.html">Наша команда</a>
+      <a href="index.html#contacts">Контакти</a>
+    </nav>
+
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="hero-inner">
+
+      <div>
+        <div class="location">Полтава · Левада · вул. Чураївни, 5</div>
+
+        <h1>Розвивальні заняття для дітей на Леваді</h1>
+
+        <p class="lead">
+          Ігрові розвивальні заняття для дошкільнят:
+          літери, математика, дрібна моторика, логіка
+          та розвиток пізнавальних навичок.
+        </p>
+
+        <a class="button" href="tel:+380502146665">
+          Дізнатися про заняття
+        </a>
+      </div>
+
+      <div class="learning-card">
+        <div class="learning-icon">🧩</div>
+
+        <p>
+          Розвиток через гру<br>
+          <strong>для дошкільнят на Леваді</strong>
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <section class="section">
+    <div class="container">
+
+      <div class="eyebrow">Розвивальні заняття · Левада · Полтава</div>
+
+      <h2>Заняття для дошкільнят на Леваді</h2>
+
+      <div class="text">
+        <p>
+          Шукаєте розвивальні заняття для дитини на Леваді?
+          В освітньому просторі «РОМАШКА» у Полтаві проходять
+          ігрові заняття для дошкільнят, спрямовані на розвиток
+          пізнавальних навичок.
+        </p>
+
+        <p>
+          На заняттях діти знайомляться з літерами та математикою,
+          виконують завдання на логіку, розвивають дрібну моторику
+          та пізнавальні навички.
+        </p>
+
+        <p>
+          Освітній простір знаходиться на
+          <strong>Леваді, вул. Чураївни, 5.</strong>
+        </p>
+      </div>
+
+      <div class="features">
+
+        <div class="feature">
+          <strong>Ігрові заняття</strong>
+          Навчальні та розвивальні завдання для дошкільнят в ігровому форматі.
+        </div>
+
+        <div class="feature">
+          <strong>Різні напрямки розвитку</strong>
+          Літери, математика, логіка, дрібна моторика та пізнавальні навички.
+        </div>
+
+        <div class="feature">
+          <strong>Левада</strong>
+          Заняття проходять у Полтаві на вул. Чураївни, 5.
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <section class="section development-section">
+    <div class="container">
+
+      <div class="eyebrow">Що розвиваємо</div>
+
+      <h2>Що входить у розвивальні заняття?</h2>
+
+      <div class="development-grid">
+
+        <div class="development-item">
+          <strong>🔤 Літери</strong>
+          Знайомство з літерами через розвивальні та ігрові завдання.
+        </div>
+
+        <div class="development-item">
+          <strong>🔢 Математика</strong>
+          Завдання, що знайомлять дитину з математичними поняттями.
+        </div>
+
+        <div class="development-item">
+          <strong>🧩 Логіка</strong>
+          Завдання на мислення, пошук зв’язків та розвиток логічних навичок.
+        </div>
+
+        <div class="development-item">
+          <strong>✋ Дрібна моторика</strong>
+          Вправи та завдання, спрямовані на розвиток дрібної моторики.
+        </div>
+
+        <div class="development-item">
+          <strong>💡 Пізнавальні навички</strong>
+          Ігрові завдання, що підтримують пізнавальний розвиток дошкільнят.
+        </div>
+
+        <div class="development-item">
+          <strong>🌼 Розвиток через гру</strong>
+          Формат занять поєднує навчальні завдання та гру.
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <section class="section">
+    <div class="container">
+
+      <div class="eyebrow">Розвиток дитини · Левада</div>
+
+      <h2>Розвивальні заняття поруч із домом</h2>
+
+      <div class="text">
+        <p>
+          Для батьків, які шукають розвивальні заняття для дітей
+          на Леваді у Полтаві, «РОМАШКА» пропонує окремий напрям
+          занять для дошкільнят.
+        </p>
+
+        <p>
+          Це саме розвивальні заняття, а не лише підготовка до школи:
+          увага приділяється різним сторонам розвитку дитини —
+          від логіки й математики до дрібної моторики та
+          пізнавальних навичок.
+        </p>
+      </div>
+
+      <a class="button" href="tel:+380502146665">
+        Запитати про заняття
+      </a>
+
+    </div>
+  </section>
+
+
+  <section class="section location-section">
+    <div class="container">
+
+      <div class="eyebrow" style="color:#dce9c8;">
+        Розвивальні заняття на Леваді
+      </div>
+
+      <h2>Полтава · Левада · вул. Чураївни, 5</h2>
+
+      <p class="text">
+        Освітній простір «РОМАШКА»<br>
+        Ігрові розвивальні заняття для дошкільнят
+      </p>
+
+      <a class="button" href="tel:+380502146665">
+        Дізнатися про заняття
+      </a>
+
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  © Освітній простір «РОМАШКА» · Полтава · Левада
+</footer>
+
+</body>
+</html>
