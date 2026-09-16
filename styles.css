@@ -1503,3 +1503,10 @@ footer p {
     letter-spacing: -1.5px !important;
   }
 }
+@media screen and (max-width: 760px) {
+  body .hero .hero-copy h1 {
+    font-size: 42px !important;
+    line-height: 0.98 !important;
+    letter-spacing: -1px !important;
+  }
+}
