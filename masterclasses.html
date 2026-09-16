@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Майстер-класи для дітей і дорослих на Леваді | Полтава</title>
+
+  <meta name="description" content="Творчі майстер-класи для дітей і дорослих на Леваді у Полтаві. Тематичні зустрічі в освітньому просторі «РОМАШКА», вул. Чураївни, 5.">
+
+  <link rel="canonical" href="https://romashka.poltava.ua/masterclasses.html">
+
+  <style>
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #18392d;
+      background: #fffdf7;
+      line-height: 1.6;
+    }
+
+    a { color: inherit; }
+
+    .header {
+      background: rgba(255,255,255,.96);
+      border-bottom: 1px solid #e9e6dc;
+    }
+
+    .header-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 18px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .brand img {
+      width: 52px;
+      height: 52px;
+      object-fit: contain;
+    }
+
+    .brand-name {
+      font-size: 24px;
+      letter-spacing: 4px;
+      color: #111;
+      font-weight: 700;
+    }
+
+    .brand-subtitle {
+      display: block;
+      font-size: 13px;
+      letter-spacing: 0;
+      color: #66716c;
+      font-weight: 400;
+      margin-top: 2px;
+    }
+
+    .nav {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .nav a {
+      text-decoration: none;
+      font-weight: 700;
+      color: #222;
+    }
+
+    .nav a:hover { color: #176448; }
+
+    .hero {
+      background:
+        radial-gradient(circle at 88% 18%, #f4c629 0 90px, transparent 91px),
+        linear-gradient(135deg, #fffaf0 0%, #f6f4dc 55%, #e7f1d8 100%);
+    }
+
+    .hero-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 75px 24px 85px;
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 55px;
+      align-items: center;
+    }
+
+    .location {
+      display: inline-block;
+      font-weight: 800;
+      color: #176448;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(42px, 6vw, 72px);
+      line-height: 1.04;
+      margin: 0 0 25px;
+      color: #173d2e;
+      letter-spacing: -2px;
+    }
+
+    .lead {
+      font-size: 20px;
+      max-width: 700px;
+      color: #40564e;
+      margin-bottom: 30px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 14px 26px;
+      background: #176448;
+      color: white;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 800;
+    }
+
+    .creative-card {
+      background: white;
+      padding: 42px;
+      border-radius: 30px;
+      box-shadow: 0 18px 50px rgba(35,70,53,.10);
+      transform: rotate(2deg);
+    }
+
+    .creative-icon {
+      font-size: 62px;
+      line-height: 1;
+      margin-bottom: 18px;
+    }
+
+    .creative-card p {
+      font-size: 20px;
+      margin: 0;
+    }
+
+    .section {
+      padding: 80px 24px;
+    }
+
+    .container {
+      max-width: 1050px;
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      color: #176448;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+
+    h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(34px, 4vw, 50px);
+      line-height: 1.1;
+      margin: 0 0 25px;
+      color: #173d2e;
+    }
+
+    .text {
+      font-size: 18px;
+      color: #40564e;
+      max-width: 850px;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      margin-top: 45px;
+    }
+
+    .feature {
+      background: #f3f6e9;
+      border-radius: 24px;
+      padding: 28px;
+    }
+
+    .feature strong {
+      display: block;
+      font-size: 20px;
+      margin-bottom: 8px;
+      color: #173d2e;
+    }
+
+    .creative-section {
+      background: #edf4e5;
+    }
+
+    .creative-box {
+      background: white;
+      padding: 38px;
+      border-radius: 28px;
+      margin-top: 35px;
+      box-shadow: 0 12px 35px rgba(35,70,53,.07);
+    }
+
+    .creative-box h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 30px;
+      margin: 0 0 15px;
+      color: #173d2e;
+    }
+
+    .location-section {
+      text-align: center;
+      background: #173d2e;
+      color: white;
+    }
+
+    .location-section h2 { color: white; }
+
+    .location-section .text {
+      color: #e6eee9;
+      margin: 0 auto 30px;
+    }
+
+    .location-section .button {
+      background: white;
+      color: #173d2e;
+    }
+
+    footer {
+      padding: 30px 24px;
+      text-align: center;
+      color: #68746f;
+      background: white;
+      font-size: 14px;
+    }
+
+    @media (max-width: 800px) {
+      .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav {
+        gap: 14px;
+        font-size: 14px;
+      }
+
+      .hero-inner {
+        grid-template-columns: 1fr;
+        padding-top: 50px;
+      }
+
+      .features {
+        grid-template-columns: 1fr;
+      }
+
+      .creative-card {
+        max-width: 330px;
+      }
+
+      h1 { letter-spacing: -1px; }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "Освітній простір РОМАШКА",
+    "url": "https://romashka.poltava.ua/",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "вул. Чураївни, 5",
+      "addressLocality": "Полтава",
+      "addressRegion": "Полтавська область",
+      "addressCountry": "UA"
+    }
+  }
+  </script>
+</head>
+
+<body>
+
+<header class="header">
+  <div class="header-inner">
+
+    <a class="brand" href="index.html">
+      <img src="romashka-clean.png" alt="Освітній простір РОМАШКА">
+
+      <div>
+        <span class="brand-name">РОМАШКА</span>
+        <span class="brand-subtitle">освітній простір · Полтава</span>
+      </div>
+    </a>
+
+    <nav class="nav">
+      <a href="index.html">Головна</a>
+      <a href="index.html#programs">Напрями</a>
+      <a href="team.html">Наша команда</a>
+      <a href="index.html#contacts">Контакти</a>
+    </nav>
+
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="hero-inner">
+
+      <div>
+        <div class="location">Полтава · Левада · вул. Чураївни, 5</div>
+
+        <h1>Майстер-класи для дітей і дорослих на Леваді</h1>
+
+        <p class="lead">
+          Творчі тематичні зустрічі у Полтаві — можливість
+          спробувати нове, створити щось власноруч і провести час разом.
+        </p>
+
+        <a class="button" href="tel:+380502146665">
+          Дізнатися про майстер-класи
+        </a>
+      </div>
+
+      <div class="creative-card">
+        <div class="creative-icon">🎨</div>
+
+        <p>
+          Творчі майстер-класи<br>
+          <strong>для дітей і дорослих</strong>
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <section class="section">
+    <div class="container">
+
+      <div class="eyebrow">Майстер-класи · Левада · Полтава</div>
+
+      <h2>Творчі зустрічі на Леваді</h2>
+
+      <div class="text">
+        <p>
+          Шукаєте майстер-клас для дитини на Леваді або хочете
+          провести творчий час разом? В освітньому просторі
+          «РОМАШКА» у Полтаві проходять тематичні майстер-класи
+          для дітей і дорослих.
+        </p>
+
+        <p>
+          Ми знаходимося на Леваді за адресою:
+          <strong>м. Полтава, вул. Чураївни, 5.</strong>
+        </p>
+      </div>
+
+      <div class="features">
+
+        <div class="feature">
+          <strong>Для дітей</strong>
+          Творчі тематичні зустрічі, де можна спробувати нове та створити щось власноруч.
+        </div>
+
+        <div class="feature">
+          <strong>Для дорослих</strong>
+          Майстер-класи — це можливість відволіктися від повсякденних справ і провести час творчо.
+        </div>
+
+        <div class="feature">
+          <strong>Левада</strong>
+          Майстер-класи проходять у Полтаві на вул. Чураївни, 5.
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <section class="section creative-section">
+    <div class="container">
+
+      <div class="eyebrow">Творчість</div>
+
+      <h2>Створити щось власноруч</h2>
+
+      <div class="text">
+        <p>
+          Майстер-класи в «РОМАШЦІ» — це тематичні творчі зустрічі
+          для дітей і дорослих. Формат та тема можуть відрізнятися
+          залежно від конкретного майстер-класу.
+        </p>
+      </div>
+
+      <div class="creative-box">
+        <h3>Які майстер-класи проходять зараз?</h3>
+
+        <div class="text">
+          <p>
+            Теми та дати зустрічей змінюються. Щоб дізнатися
+            про найближчий майстер-клас на Леваді, зв’яжіться
+            з освітнім простором «РОМАШКА».
+          </p>
+        </div>
+
+        <a class="button" href="tel:+380502146665">
+          Дізнатися найближчу дату
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <section class="section">
+    <div class="container">
+
+      <div class="eyebrow">Дітям і дорослим · Левада</div>
+
+      <h2>Майстер-класи поруч із домом</h2>
+
+      <div class="text">
+        <p>
+          Якщо ви живете на Леваді та шукаєте творчі заняття
+          або майстер-класи для дітей чи дорослих, освітній простір
+          «РОМАШКА» знаходиться безпосередньо у районі Левада.
+        </p>
+
+        <p>
+          Адреса:
+          <strong>Полтава, Левада, вул. Чураївни, 5.</strong>
+          Актуальну тему, дату та умови участі можна уточнити
+          перед записом.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <section class="section location-section">
+    <div class="container">
+
+      <div class="eyebrow" style="color:#dce9c8;">
+        Майстер-класи на Леваді
+      </div>
+
+      <h2>Полтава · Левада · вул. Чураївни, 5</h2>
+
+      <p class="text">
+        Освітній простір «РОМАШКА»<br>
+        Творчі майстер-класи для дітей і дорослих
+      </p>
+
+      <a class="button" href="tel:+380502146665">
+        Дізнатися про найближчий майстер-клас
+      </a>
+
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  © Освітній простір «РОМАШКА» · Полтава · Левада
+</footer>
+
+</body>
+</html>
