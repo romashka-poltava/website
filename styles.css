@@ -877,51 +877,43 @@ footer p {
 }
 
 /* ===== Макет: кремовая гамма, карточки вокруг ромашки ===== */
-/* ==================================================
-   ROMASHKA — FINAL HERO DESIGN
-   ================================================== */
-
-/* DESKTOP */
+/* =========================================================
+   ROMASHKA — HERO FINAL
+   ========================================================= */
 
 .hero {
   position: relative;
   overflow: hidden;
-  background:
-    linear-gradient(
-      180deg,
-      #9edcf5 0%,
-      #bce9f1 37%,
-      #fff2a8 72%,
-      #e4f5b5 100%
-    );
+  background: linear-gradient(
+    180deg,
+    #9edcf5 0%,
+    #bce9f1 38%,
+    #fff3a5 72%,
+    #e5f5b4 100%
+  );
 }
 
-/* Радуга */
+/* РАДУГА */
+
 .hero::before {
   content: "";
   position: absolute;
-  z-index: 1;
-
   width: 330px;
   height: 330px;
-
   top: -185px;
   right: -100px;
-
   border-radius: 50%;
-
-  background:
-    radial-gradient(
-      circle,
-      transparent 0 44%,
-      #9edcf5 44% 50%,
-      #9fd7a3 50% 56%,
-      #f3df83 56% 62%,
-      #f5bd85 62% 68%,
-      #e9a0b5 68% 74%,
-      transparent 74%
-    );
-
+  background: radial-gradient(
+    circle,
+    transparent 0 44%,
+    #9edcf5 44% 50%,
+    #9fd7a3 50% 56%,
+    #f3df83 56% 62%,
+    #f5bd85 62% 68%,
+    #e9a0b5 68% 74%,
+    transparent 74%
+  );
+  z-index: 1;
   pointer-events: none;
 }
 
@@ -934,7 +926,10 @@ footer p {
   z-index: 2;
 }
 
-/* HERO ART */
+
+/* =========================================================
+   DESKTOP ART
+   ========================================================= */
 
 .hero-art {
   position: relative;
@@ -946,64 +941,44 @@ footer p {
 
 .hero-art .sun {
   position: absolute;
-
   width: 145px;
   height: 145px;
-
   top: 120px;
   right: 45px;
-
   border-radius: 50%;
-
-  background:
-    radial-gradient(
-      circle at 35% 30%,
-      #ffe985 0%,
-      #ffd438 55%,
-      #f7b817 100%
-    );
-
+  background: radial-gradient(
+    circle at 35% 30%,
+    #ffe985 0%,
+    #ffd438 55%,
+    #f7b817 100%
+  );
   box-shadow: 0 0 35px rgba(255, 211, 42, 0.20);
-
   z-index: 2;
 }
 
 /* Холмы */
 
-.hero-art .hill {
-  position: absolute;
-  pointer-events: none;
-}
-
 .hero-art .hill-1 {
+  position: absolute;
   width: 125%;
   height: 245px;
-
   left: -15%;
   bottom: -75px;
-
   background: #9bd66f;
-
   border-radius: 52% 48% 0 0;
-
   transform: rotate(-3deg);
-
   z-index: 2;
 }
 
 .hero-art .hill-2 {
+  position: absolute;
   width: 130%;
   height: 125px;
-
   left: -15%;
   bottom: -60px;
-
   background: #72c765;
-
   border-radius: 52% 48% 0 0;
-
   transform: rotate(2deg);
-
   z-index: 3;
 }
 
@@ -1011,15 +986,11 @@ footer p {
 
 .hero-art .big-daisy {
   position: absolute;
-
   width: 330px;
   height: 330px;
-
   left: 50%;
   bottom: -5px;
-
   transform: translateX(-50%);
-
   z-index: 4;
 }
 
@@ -1029,99 +1000,65 @@ footer p {
   object-fit: contain;
 }
 
-/* Маленькие белые карточки */
+
+/* =========================================================
+   DESKTOP CARDS
+   ========================================================= */
 
 .hero-art .card-float {
   position: absolute;
-
-  width: auto;
-  min-width: 120px;
-  min-height: 0;
-
   padding: 12px 15px;
-
-  background: rgba(255, 255, 255, 0.95);
-
+  background: rgba(255,255,255,.96);
   border: 0;
   border-radius: 16px;
-
-  box-shadow: 0 5px 16px rgba(40, 70, 50, 0.08);
-
+  box-shadow: 0 5px 16px rgba(40,70,50,.08);
   z-index: 6;
 }
 
 .hero-art .card-float b {
   display: block;
-
   margin: 0 0 4px;
-
   color: #20241f;
-
   font-size: 22px;
   line-height: 1;
 }
 
 .hero-art .card-float span {
   color: #555d56;
-
   font-size: 12px;
   line-height: 1.15;
 }
 
-/* ABC */
-
 .hero-art .card-a {
   top: 105px;
   left: 4%;
-  right: auto;
-
   width: 135px;
-
   transform: rotate(-4deg);
 }
-
-/* 1 2 3 */
 
 .hero-art .card-b {
   top: 55px;
   left: 35%;
-
   width: 145px;
-
   transform: rotate(3deg);
 }
 
 .hero-art .card-b .numbers {
   display: flex;
   gap: 4px;
-
-  margin-bottom: 4px;
-
+  margin: 0 0 4px;
   font-size: 20px;
   font-weight: 900;
 }
 
-.hero-art .card-b .n1 {
-  color: #168bd2;
-}
-
-.hero-art .card-b .n2 {
-  color: #f0a31b;
-}
-
-.hero-art .card-b .n3 {
-  color: #e54141;
-}
-
-/* Ритмика */
+.hero-art .card-b .n1 { color: #168bd2; }
+.hero-art .card-b .n2 { color: #f0a31b; }
+.hero-art .card-b .n3 { color: #e54141; }
 
 .hero-art .card-c {
   top: 245px;
   right: 2%;
-  bottom: auto;
-
   width: 120px;
-
   transform: rotate(4deg);
 }
 
@@ -1131,9 +1068,9 @@ footer p {
 }
 
 
-/* ==================================================
+/* =========================================================
    MOBILE
-   ================================================== */
+   ========================================================= */
 
 @media (max-width: 760px) {
 
@@ -1152,14 +1089,14 @@ footer p {
   }
 
   .brand-mark {
-    transform: scale(0.82);
+    transform: scale(.82);
     transform-origin: left center;
     margin-right: -3px;
   }
 
   .brand strong {
     font-size: 22px;
-    letter-spacing: 0.12em;
+    letter-spacing: .12em;
   }
 
   .brand small {
@@ -1175,21 +1112,15 @@ footer p {
   .menu {
     display: none;
     position: absolute;
-
     top: 106px;
     left: 20px;
     right: 20px;
-
     padding: 18px;
-
     flex-direction: column;
     align-items: stretch;
     gap: 14px;
-
     background: #fff;
-
     border-radius: 18px;
-
     box-shadow: var(--shadow);
   }
 
@@ -1201,371 +1132,257 @@ footer p {
   /* HERO */
 
   .hero {
-    position: relative;
-
-    background:
-      linear-gradient(
-        180deg,
-        #9edcf5 0%,
-        #bce9f1 38%,
-        #fff3a5 70%,
-        #e5f5b4 100%
-      );
+    background: linear-gradient(
+      180deg,
+      #9edcf5 0%,
+      #bce9f1 38%,
+      #fff3a5 70%,
+      #e5f5b4 100%
+    );
   }
 
-  /*
-    Радуга справа сверху.
-    Не облака.
-  */
+  /* Радуга */
 
   .hero::before {
-    content: "";
-
-    position: absolute;
-
     width: 205px;
     height: 205px;
-
     top: -100px;
     right: -67px;
-
-    border-radius: 50%;
-
-    background:
-      radial-gradient(
-        circle,
-        transparent 0 42%,
-        #9edcf5 42% 48%,
-        #9fd7a3 48% 54%,
-        #f3df83 54% 60%,
-        #f5bd85 60% 66%,
-        #e9a0b5 66% 72%,
-        transparent 72%
-      );
-
-    z-index: 1;
-
-    pointer-events: none;
+    background: radial-gradient(
+      circle,
+      transparent 0 42%,
+      #9edcf5 42% 48%,
+      #9fd7a3 48% 54%,
+      #f3df83 54% 60%,
+      #f5bd85 60% 66%,
+      #e9a0b5 66% 72%,
+      transparent 72%
+    );
   }
 
   .hero-grid {
     display: block;
     min-height: auto;
-
-    position: relative;
-    z-index: 2;
   }
-
-  /* Текст */
 
   .hero-copy {
     position: relative;
     z-index: 3;
-
     padding: 25px 0 4px;
   }
 
   .eyebrow {
     margin-bottom: 14px;
-
-    color: #347a61;
-
     font-size: 14px;
     line-height: 1.2;
   }
 
   .hero h1 {
     max-width: 620px;
-
     font-size: clamp(48px, 8.2vw, 62px);
-
-    line-height: 0.94;
-    letter-spacing: -0.045em;
+    line-height: .94;
+    letter-spacing: -.045em;
   }
 
   .lead {
     max-width: 650px;
-
     margin-top: 18px;
-
     font-size: 18px;
     line-height: 1.45;
   }
 
-  /* Кнопки */
+
+  /* КНОПКИ */
 
   .hero-actions {
     display: grid;
-
     grid-template-columns: 1fr 1fr;
-
     gap: 10px;
-
     margin-top: 20px;
   }
 
   .hero-actions .btn {
     width: 100%;
     min-height: 52px;
-
     padding: 0 10px;
-
     font-size: 16px;
     line-height: 1.05;
   }
 
-  /* Три преимущества */
+
+  /* ТРИ ПРЕИМУЩЕСТВА */
 
   .mini-trust {
-    display: flex;
-
-    flex-wrap: nowrap;
-
-    justify-content: space-between;
-    align-items: center;
-
-    gap: 8px;
-
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0,1fr));
+    gap: 6px;
     margin: 14px 0 5px;
-
-    font-size: 13px;
-    line-height: 1.1;
+    font-size: 11px;
+    line-height: 1.15;
   }
 
   .mini-trust span {
-    white-space: nowrap;
+    display: block;
+    min-width: 0;
+    white-space: normal;
+    text-align: center;
   }
 
 
-  /* ==================================================
-     НИЖНЯЯ ИЛЛЮСТРАЦИЯ HERO
-     ================================================== */
+  /* НИЖНЯЯ ИЛЛЮСТРАЦИЯ */
 
   .hero-art {
     position: relative;
-
     height: 285px;
     min-height: 285px;
-
     margin: 0 -20px;
-
     overflow: hidden;
-
     background: transparent;
   }
 
 
-  /* Солнце — справа и ничем не закрыто */
+  /* СОЛНЦЕ */
 
   .hero-art .sun {
-    position: absolute;
-
     width: 70px;
     height: 70px;
-
-    top: 77px;
+    top: 78px;
     right: 6%;
-
     left: auto;
     bottom: auto;
-
-    border-radius: 50%;
-
-    background:
-      radial-gradient(
-        circle at 35% 30%,
-        #ffe985 0%,
-        #ffd438 55%,
-        #f7b817 100%
-      );
-
     box-shadow: none;
-
     z-index: 2;
   }
 
 
-  /* Карточки — маленькие и в одну линию */
+  /* ТРИ БЕЛЫЕ КАРТОЧКИ:
+     одинаковые, не перекрываются */
 
   .hero-art .card-float {
     position: absolute;
-
-    width: auto;
+    top: 24px;
+    width: 30%;
+    height: 54px;
     min-width: 0;
     min-height: 0;
-
-    padding: 8px 10px;
-
+    padding: 6px 7px;
     display: flex;
     align-items: center;
-
-    gap: 3px;
-
-    background: rgba(255, 255, 255, 0.96);
-
+    justify-content: center;
+    gap: 4px;
+    overflow: hidden;
+    background: rgba(255,255,255,.96);
     border: 0;
     border-radius: 13px;
-
-    box-shadow: 0 4px 12px rgba(42, 73, 58, 0.07);
-
+    box-shadow: 0 4px 12px rgba(42,73,58,.07);
     transform: none;
-
     z-index: 6;
   }
 
   .hero-art .card-float b {
+    flex-shrink: 0;
     display: inline-block;
-
     margin: 0;
-
-    font-size: 17px;
+    font-size: 15px;
     line-height: 1;
   }
 
   .hero-art .card-float span {
     display: inline-block;
-
+    min-width: 0;
     margin: 0;
-
-    font-size: 10px;
+    font-size: 8.5px;
     line-height: 1.1;
+    white-space: normal;
   }
 
-
-  /* ABC — слева */
+  /* Английский */
 
   .hero-art .card-a {
-    top: 25px;
-
-    left: 1%;
+    left: 2%;
     right: auto;
-    bottom: auto;
-
-    width: 105px;
-
+    top: 24px;
+    width: 29%;
     transform: rotate(-2deg);
   }
 
-
-  /* 1 2 3 — между ABC и Ритмикой */
+  /* Подготовка */
 
   .hero-art .card-b {
-    top: 31px;
-
-    left: 24%;
+    left: 35.5%;
     right: auto;
-    bottom: auto;
-
-    width: 122px;
-
+    top: 24px;
+    width: 29%;
     transform: rotate(1deg);
   }
 
   .hero-art .card-b .numbers {
     display: inline-flex;
-
+    flex-shrink: 0;
     gap: 2px;
-
     margin: 0;
-
-    font-size: 14px;
+    font-size: 12px;
     line-height: 1;
-
     white-space: nowrap;
   }
 
-
-  /* Ритмика — центр/справа,
-     НЕ НА СОЛНЦЕ */
+  /* Ритмика */
 
   .hero-art .card-c {
-    top: 27px;
-
-    left: 48%;
-    right: auto;
+    left: auto;
+    right: 2%;
+    top: 24px;
     bottom: auto;
-
-    width: 100px;
-
-    transform: rotate(-1deg);
+    width: 29%;
+    transform: rotate(2deg);
   }
 
   .hero-art .card-c b {
     margin: 0;
-
-    font-size: 14px;
+    font-size: 13px;
   }
 
 
-  /* Ромашка */
+  /* РОМАШКА */
 
   .hero-art .big-daisy {
-    position: absolute;
-
     width: 155px;
     height: 175px;
-
     left: 50%;
-    right: auto;
-
     top: auto;
     bottom: -2px;
-
     transform: translateX(-50%);
-
     z-index: 5;
   }
 
 
-  /* Светлый дальний холм */
+  /* ХОЛМЫ */
 
   .hero-art .hill-1 {
-    position: absolute;
-
     width: 125%;
     height: 105px;
-
     left: -22%;
-    right: auto;
-
-    top: auto;
     bottom: -38px;
-
     background: #9bd66f;
-
     border-radius: 52% 48% 0 0;
-
     transform: rotate(-2deg);
-
     z-index: 2;
   }
 
-
-  /* Тёмный передний холм */
-
   .hero-art .hill-2 {
-    position: absolute;
-
     width: 125%;
     height: 72px;
-
     left: -4%;
-    right: auto;
-
-    top: auto;
     bottom: -37px;
-
     background: #72c765;
-
     border-radius: 52% 48% 0 0;
-
     transform: rotate(2deg);
-
     z-index: 4;
   }
 
 
-  /* Остальная страница */
+  /* ОСТАЛЬНАЯ СТРАНИЦА */
 
   .section {
     padding: 52px 0;
@@ -1584,9 +1401,7 @@ footer p {
   .section-head {
     flex-direction: column;
     align-items: flex-start;
-
     gap: 14px;
-
     margin-bottom: 26px;
   }
 
@@ -1607,7 +1422,7 @@ footer p {
 }
 
 
-/* Очень узкие телефоны */
+/* VERY SMALL PHONES */
 
 @media (max-width: 390px) {
 
@@ -1628,31 +1443,28 @@ footer p {
   }
 
   .mini-trust {
-    font-size: 11px;
+    font-size: 10px;
   }
 
   .hero-art {
     height: 270px;
     min-height: 270px;
-
     margin-left: -14px;
     margin-right: -14px;
   }
 
-  .hero-art .card-a {
-    left: 1%;
+  .hero-art .card-float {
+    width: 30%;
+    padding-left: 5px;
+    padding-right: 5px;
   }
 
-  .hero-art .card-b {
-    left: 25%;
+  .hero-art .card-float b {
+    font-size: 14px;
   }
 
-  .hero-art .card-c {
-    left: 53%;
-  }
-
-  .hero-art .sun {
-    right: 4%;
+  .hero-art .card-float span {
+    font-size: 8px;
   }
 
   .hero-art .big-daisy {
@@ -1662,9 +1474,7 @@ footer p {
 }
 
 
-/* ==================================================
-   OTHER SECTIONS — KEEP CURRENT PALETTE
-   ================================================== */
+/* СОХРАНЯЕМ ЦВЕТА ОСТАЛЬНОГО САЙТА */
 
 .section.soft {
   background: #f3f8ec;
@@ -1683,109 +1493,4 @@ footer p {
 .instagram .eyebrow,
 .instagram p {
   color: #347a61;
-}
-/* ===== MOBILE HERO — TEXT + CARDS FIX ===== */
-
-@media (max-width: 760px) {
-
-  /* 1. Три преимущества должны полностью помещаться */
-  .mini-trust {
-    width: 100% !important;
-    display: grid !important;
-    grid-template-columns: repeat(3, 1fr) !important;
-    gap: 4px !important;
-
-    margin: 14px 0 5px !important;
-
-    font-size: 11px !important;
-    line-height: 1.15 !important;
-  }
-
-  .mini-trust span {
-    display: block !important;
-    min-width: 0 !important;
-    white-space: normal !important;
-    text-align: center !important;
-  }
-
-
-  /* 2. Общий размер трёх белых карточек */
-  .hero-art .card-float {
-    height: 58px !important;
-    min-height: 58px !important;
-
-    padding: 7px 9px !important;
-
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-
-    gap: 4px !important;
-
-    border-radius: 14px !important;
-
-    overflow: hidden !important;
-  }
-
-  .hero-art .card-float b {
-    flex-shrink: 0 !important;
-    margin: 0 !important;
-
-    font-size: 16px !important;
-    line-height: 1 !important;
-  }
-
-  .hero-art .card-float span {
-    margin: 0 !important;
-
-    font-size: 9px !important;
-    line-height: 1.15 !important;
-
-    white-space: normal !important;
-  }
-
-
-  /* ABC — левая карточка */
-  .hero-art .card-a {
-    top: 27px !important;
-    left: 2% !important;
-    right: auto !important;
-
-    width: 29% !important;
-
-    transform: rotate(-2deg) !important;
-  }
-
-
-  /* 1 2 3 — центральная карточка */
-  .hero-art .card-b {
-    top: 34px !important;
-    left: 35.5% !important;
-    right: auto !important;
-
-    width: 29% !important;
-
-    transform: rotate(1deg) !important;
-  }
-
-  .hero-art .card-b .numbers {
-    flex-shrink: 0 !important;
-
-    margin: 0 !important;
-
-    font-size: 13px !important;
-  }
-
-
-  /* Ритміка — правая карточка */
-  .hero-art .card-c {
-    top: 27px !important;
-    left: auto !important;
-    right: 2% !important;
-
-    width: 29% !important;
-
-    transform: rotate(2deg) !important;
-  }
-
 }
