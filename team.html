@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Наша команда — Освітній простір «РОМАШКА» | Полтава</title>
+
+  <meta
+    name="description"
+    content="Команда освітнього простору «РОМАШКА» у Полтаві: вихователі, вчителі англійської мови, вчитель початкових класів, логопед, хореограф та художник."
+  >
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Nunito", sans-serif;
+      background: #fffdf4;
+      color: #25352a;
+      line-height: 1.5;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* HEADER */
+
+    .site-header {
+      background: rgba(255, 255, 255, 0.97);
+      border-bottom: 1px solid rgba(7, 81, 63, 0.08);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      min-height: 76px;
+      padding: 10px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      font-weight: 900;
+      color: #07513f;
+      letter-spacing: 0.02em;
+    }
+
+    .brand img {
+      width: 48px;
+      height: 48px;
+      object-fit: contain;
+    }
+
+    .brand-text {
+      font-size: 1.05rem;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      font-size: 0.96rem;
+      font-weight: 700;
+    }
+
+    .nav a {
+      transition: opacity 0.2s ease;
+    }
+
+    .nav a:hover {
+      opacity: 0.65;
+    }
+
+    .nav .active {
+      color: #0b6d52;
+    }
+
+    .home-button {
+      background: #0b6d52;
+      color: white;
+      padding: 10px 18px;
+      border-radius: 999px;
+      font-weight: 800;
+    }
+
+    /* HERO */
+
+    .team-hero {
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 12% 18%, rgba(255, 225, 80, 0.28) 0 90px, transparent 91px),
+        radial-gradient(circle at 92% 20%, rgba(255, 255, 255, 0.55) 0 110px, transparent 111px),
+        linear-gradient(135deg, #dff4df 0%, #f8f4b8 48%, #d8f0d8 100%);
+      padding: 66px 24px 70px;
+    }
+
+    .team-hero::before,
+    .team-hero::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.25;
+      pointer-events: none;
+    }
+
+    .team-hero::before {
+      width: 210px;
+      height: 210px;
+      background: #ffffff;
+      left: -80px;
+      bottom: -90px;
+    }
+
+    .team-hero::after {
+      width: 260px;
+      height: 260px;
+      background: #73bf7b;
+      right: -110px;
+      bottom: -130px;
+    }
+
+    .hero-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 52px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.72);
+      color: #0b6d52;
+      border-radius: 999px;
+      padding: 8px 14px;
+      margin-bottom: 18px;
+      font-size: 0.85rem;
+      font-weight: 900;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .hero-copy h1 {
+      font-family: "Playfair Display", serif;
+      color: #07513f;
+      font-size: clamp(2.5rem, 5vw, 4.8rem);
+      line-height: 0.98;
+      margin-bottom: 20px;
+    }
+
+    .hero-copy p {
+      max-width: 570px;
+      color: #405c4c;
+      font-size: 1.08rem;
+      line-height: 1.7;
+    }
+
+    .team-main-photo {
+      background: white;
+      padding: 10px;
+      border-radius: 28px;
+      box-shadow: 0 18px 50px rgba(44, 83, 55, 0.16);
+      transform: rotate(1deg);
+    }
+
+    .team-main-photo img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      border-radius: 20px;
+    }
+
+    /* TEAM SECTION */
+
+    .team-section {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 76px 24px 90px;
+    }
+
+    .section-heading {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 46px;
+    }
+
+    .section-heading span {
+      color: #0b6d52;
+      font-weight: 900;
+      font-size: 0.85rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .section-heading h2 {
+      font-family: "Playfair Display", serif;
+      color: #07513f;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      margin: 8px 0 12px;
+    }
+
+    .section-heading p {
+      color: #637469;
+      font-size: 1rem;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 28px;
+    }
+
+    .team-card {
+      background: white;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 10px 34px rgba(45, 82, 56, 0.09);
+      border: 1px solid rgba(11, 109, 82, 0.07);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .team-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 16px 40px rgba(45, 82, 56, 0.14);
+    }
+
+    .team-photo {
+      width: 100%;
+      aspect-ratio: 4 / 4.7;
+      overflow: hidden;
+      background: #edf4ed;
+    }
+
+    .team-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      transition: transform 0.35s ease;
+    }
+
+    .team-card:hover .team-photo img {
+      transform: scale(1.025);
+    }
+
+    .team-info {
+      padding: 20px 20px 23px;
+      text-align: center;
+    }
+
+    .team-info h3 {
+      color: #183f32;
+      font-size: 1.2rem;
+      font-weight: 900;
+      margin-bottom: 5px;
+    }
+
+    .team-info p {
+      color: #0b6d52;
+      font-size: 0.94rem;
+      font-weight: 700;
+    }
+
+    /* BOTTOM TEAM PHOTO */
+
+    .team-together {
+      max-width: 1000px;
+      margin: 72px auto 0;
+      background: #e5f3df;
+      border-radius: 30px;
+      padding: 34px;
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 34px;
+      align-items: center;
+    }
+
+    .team-together img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      border-radius: 22px;
+    }
+
+    .together-copy h2 {
+      font-family: "Playfair Display", serif;
+      color: #07513f;
+      font-size: 2rem;
+      margin-bottom: 12px;
+    }
+
+    .together-copy p {
+      color: #52675a;
+      line-height: 1.7;
+    }
+
+    .back-link {
+      display: inline-flex;
+      margin-top: 20px;
+      background: #0b6d52;
+      color: white;
+      padding: 11px 18px;
+      border-radius: 999px;
+      font-weight: 800;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: #07513f;
+      color: rgba(255, 255, 255, 0.88);
+      text-align: center;
+      padding: 28px 20px;
+      font-size: 0.9rem;
+    }
+
+    footer strong {
+      color: white;
+    }
+
+    /* TABLET */
+
+    @media (max-width: 900px) {
+      .nav {
+        display: none;
+      }
+
+      .hero-inner {
+        grid-template-columns: 1fr;
+        gap: 34px;
+      }
+
+      .hero-copy {
+        text-align: center;
+      }
+
+      .hero-copy p {
+        margin: 0 auto;
+      }
+
+      .team-main-photo {
+        max-width: 680px;
+        margin: 0 auto;
+        transform: none;
+      }
+
+      .team-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .team-together {
+        grid-template-columns: 1fr;
+      }
+
+      .together-copy {
+        text-align: center;
+      }
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 600px) {
+      .header-inner {
+        min-height: 62px;
+        padding: 7px 15px;
+      }
+
+      .brand img {
+        width: 40px;
+        height: 40px;
+      }
+
+      .brand-text {
+        font-size: 0.92rem;
+      }
+
+      .home-button {
+        padding: 8px 13px;
+        font-size: 0.82rem;
+      }
+
+      .team-hero {
+        padding: 38px 16px 45px;
+      }
+
+      .hero-inner {
+        gap: 26px;
+      }
+
+      .eyebrow {
+        font-size: 0.72rem;
+        margin-bottom: 13px;
+      }
+
+      .hero-copy h1 {
+        font-size: 2.55rem;
+        margin-bottom: 14px;
+      }
+
+      .hero-copy p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+      }
+
+      .team-main-photo {
+        padding: 7px;
+        border-radius: 20px;
+      }
+
+      .team-main-photo img {
+        border-radius: 15px;
+      }
+
+      .team-section {
+        padding: 48px 14px 60px;
+      }
+
+      .section-heading {
+        margin-bottom: 28px;
+      }
+
+      .section-heading h2 {
+        font-size: 2rem;
+      }
+
+      .team-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+      }
+
+      .team-card {
+        border-radius: 17px;
+      }
+
+      .team-photo {
+        aspect-ratio: 4 / 5;
+      }
+
+      .team-info {
+        padding: 13px 8px 16px;
+      }
+
+      .team-info h3 {
+        font-size: 0.96rem;
+        line-height: 1.25;
+      }
+
+      .team-info p {
+        font-size: 0.78rem;
+        line-height: 1.3;
+        margin-top: 4px;
+      }
+
+      .team-together {
+        margin-top: 48px;
+        padding: 16px;
+        border-radius: 22px;
+        gap: 20px;
+      }
+
+      .team-together img {
+        border-radius: 16px;
+      }
+
+      .together-copy h2 {
+        font-size: 1.7rem;
+      }
+
+      .together-copy p {
+        font-size: 0.92rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+
+      <a class="brand" href="index.html">
+        <img src="romashka-clean.png" alt="Логотип освітнього простору РОМАШКА">
+        <span class="brand-text">РОМАШКА</span>
+      </a>
+
+      <nav class="nav" aria-label="Головна навігація">
+        <a href="index.html">Головна</a>
+        <a href="index.html#about">Про простір</a>
+        <a href="index.html#services">Напрями</a>
+        <a class="active" href="team.html">Наша команда</a>
+        <a href="index.html#contacts">Контакти</a>
+      </nav>
+
+      <a class="home-button" href="index.html">На головну</a>
+
+    </div>
+  </header>
+
+
+  <main>
+
+    <section class="team-hero">
+      <div class="hero-inner">
+
+        <div class="hero-copy">
+          <div class="eyebrow">Освітній простір «РОМАШКА»</div>
+
+          <h1>Наша команда</h1>
+
+          <p>
+            Люди, які щодня створюють у «РОМАШЦІ» простір для навчання,
+            творчості, розвитку та дитячої цікавості.
+          </p>
+        </div>
+
+        <div class="team-main-photo">
+          <img
+            src="team-outside.jpg"
+            alt="Команда освітнього простору РОМАШКА у Полтаві"
+          >
+        </div>
+
+      </div>
+    </section>
+
+
+    <section class="team-section">
+
+      <div class="section-heading">
+        <span>Знайомимося ближче</span>
+        <h2>Команда «РОМАШКИ»</h2>
+        <p>
+          Педагоги та спеціалісти, які працюють з дітьми у нашому просторі.
+        </p>
+      </div>
+
+
+      <div class="team-grid">
+
+        <article class="team-card">
+          <div class="team-photo">
+            <img
+              src="maryna-pliusuk.jpg"
+              alt="Марина Плісюк — директор, вихователь"
+            >
+          </div>
+          <div class="team-info">
+            <h3>Марина Плісюк</h3>
+            <p>Директор, вихователь</p>
+          </div>
+        </article>
+
+
+        <article class="team-card">
+          <div class="team-photo">
+            <img
+              src="nataliia-halos.jpg"
+              alt="Наталія Гальос — вчитель англійської мови"
+            >
+          </div>
+          <div class="team-info">
+            <h3>Наталія Гальос</h3>
+            <p>Вчитель англійської мови</p>
+          </div>
+        </article>
+
+
+        <article class="team-card">
+          <div class="team-photo">
+            <img
+              src="alla-fedak.jpg"
+              alt="Алла Федак — художник"
+            >
+          </div>
+          <div class="team-info">
+            <h3>Алла Федак</h3>
+            <p>Художник</p>
+          </div>
+        </article>
+
+
+        <article class="team-card">
+          <div class="team-photo">
+            <img
+              src="anna-nazarenko.jpg"
+              alt="Анна Назаренко — вихователь"
+            >
+          </div>
+          <div class="team-info">
+            <h3>Анна Назаренко</h3>
+            <p>Вихователь</p>
+          </div>
+        </article>
+
+
+        <article class="team-card">
+          <div class="team-photo">
+            <img
+              src="iryna-kalynovych.jpg"
+              alt="Ірина Калинович — хореограф"
+            >
+          </div>
+          <div class="team-info">
+            <h3>Ірина Калинович</h3>
+            <p>Хореограф</p>
+          </div>
+        </article>
+
+
+        <article class="team-card">
+          <div class="team-photo">
+            <img
+              src="olena-vozniuk.jpg"
+              alt="Олена Вознюк — логопед"
+            >
+          </div>
+          <div class="team-info">
+            <h3>Олена Вознюк</h3>
+            <p>Логопед</p>
+          </div>
+        </article>
+
+
+        <article class="team-card">
+          <div class="team-photo">
+            <img
+              src="natali-skryl.jpg"
+              alt="Наталі Скриль — вихователь"
+            >
+          </div>
+          <div class="team-info">
+            <h3>Наталі Скриль</h3>
+            <p>Вихователь</p>
+          </div>
+        </article>
+
+
+        <article class="team-card">
+          <div class="team-photo">
+            <img
+              src="nataliia-khvostenko.jpg"
+              alt="Наталія Хвостенко — вчитель початкових класів"
+            >
+          </div>
+          <div class="team-info">
+            <h3>Наталія Хвостенко</h3>
+            <p>Вчитель початкових класів</p>
+          </div>
+        </article>
+
+
+        <article class="team-card">
+          <div class="team-photo">
+            <img
+              src="daria-fursa.jpg"
+              alt="Дар’я Фурса — вчитель англійської мови"
+            >
+          </div>
+          <div class="team-info">
+            <h3>Дар’я Фурса</h3>
+            <p>Вчитель англійської мови</p>
+          </div>
+        </article>
+
+      </div>
+
+
+      <div class="team-together">
+
+        <img
+          src="team-inside.jpg"
+          alt="Команда освітнього простору РОМАШКА"
+        >
+
+        <div class="together-copy">
+          <h2>Разом створюємо «РОМАШКУ»</h2>
+
+          <p>
+            Простір, де дитина може пізнавати нове, розвивати свої здібності,
+            творити, рухатися, спілкуватися та зростати у власному темпі.
+          </p>
+
+          <a class="back-link" href="index.html">
+            ← Повернутися на головну
+          </a>
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <footer>
+    <strong>Освітній простір «РОМАШКА»</strong> · Полтава
+  </footer>
+
+</body>
+</html>
