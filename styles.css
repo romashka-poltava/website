@@ -1179,7 +1179,7 @@ footer p {
 
   .hero h1 {
     max-width: 620px;
-    font-size: clamp(48px, 8.2vw, 62px);
+    font-size: clamp(42px, 7.2vw, 54px);
     line-height: .94;
     letter-spacing: -.045em;
   }
