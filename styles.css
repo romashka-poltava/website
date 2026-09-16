@@ -1494,3 +1494,12 @@ footer p {
 .instagram p {
   color: #347a61;
 }
+/* Заголовок HERO на мобильном — не заходит на радугу */
+@media (max-width: 760px) {
+  .hero h1 {
+    font-size: 52px !important;
+    line-height: 0.96 !important;
+    max-width: 68% !important;
+    letter-spacing: -1.5px !important;
+  }
+}
