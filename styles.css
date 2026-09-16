@@ -1257,56 +1257,170 @@ footer p {
 
 }
 /* РАДУГА В HERO-РИСУНКЕ */
-.hero-art {
-  position: relative !important;
-  overflow: hidden !important;
-}
+/* ===== ФИНАЛЬНЫЙ МОБИЛЬНЫЙ HERO ===== */
 
-/* внешняя часть радуги */
-.hero-art::before {
-  content: "" !important;
-  position: absolute !important;
+@media (max-width: 760px) {
 
-  width: 260px !important;
-  height: 260px !important;
+  /* Весь первый экран */
+  .hero {
+    position: relative;
+    overflow: hidden;
 
-  top: -145px !important;
-  right: -80px !important;
+    background:
+      linear-gradient(
+        to bottom,
+        #9edcf5 0%,
+        #b9e8f5 34%,
+        #fff4a8 67%,
+        #e5f5b9 100%
+      ) !important;
+  }
 
-  border-radius: 50% !important;
+  /* Радуга в правом верхнем углу */
+  .hero::before {
+    content: "";
+    position: absolute;
 
-  background: conic-gradient(
-    from 180deg,
-    #ef9cae 0deg 180deg,
-    transparent 180deg 360deg
-  ) !important;
+    width: 230px;
+    height: 230px;
 
-  z-index: 1 !important;
-  pointer-events: none !important;
-}
+    top: -105px;
+    right: -75px;
 
-/* делаем из круга именно несколько дуг радуги */
-.hero-art::after {
-  content: "" !important;
-  position: absolute !important;
+    border-radius: 50%;
 
-  width: 230px !important;
-  height: 230px !important;
+    background:
+      radial-gradient(
+        circle,
+        transparent 0 42%,
+        #9ed5a5 43% 49%,
+        #f5df87 50% 56%,
+        #f7c786 57% 63%,
+        #efa6b5 64% 70%,
+        transparent 71%
+      );
 
-  top: -130px !important;
-  right: -65px !important;
+    z-index: 0;
+    pointer-events: none;
+  }
 
-  border-radius: 50% !important;
+  /* Текст и кнопки должны быть поверх радуги */
+  .hero-copy {
+    position: relative;
+    z-index: 3;
+  }
 
-  border:
-    14px solid #f4a6b8 !important;
+  /* Нижняя иллюстрация */
+  .hero-art {
+    position: relative;
+    z-index: 2;
 
-  box-shadow:
-    inset 0 0 0 14px #f7c786,
-    inset 0 0 0 28px #f5df87,
-    inset 0 0 0 42px #9ed5a5,
-    inset 0 0 0 56px #92c9df !important;
+    min-height: 330px !important;
+    margin-top: 0 !important;
 
-  z-index: 1 !important;
-  pointer-events: none !important;
+    background: transparent !important;
+    overflow: hidden;
+  }
+
+  /* Солнце */
+  .hero-art .sun {
+    position: absolute !important;
+
+    width: 78px !important;
+    height: 78px !important;
+
+    right: 6% !important;
+    top: 75px !important;
+
+    border-radius: 50% !important;
+
+    background:
+      radial-gradient(
+        circle at 38% 35%,
+        #ffe981 0%,
+        #ffd43b 48%,
+        #f7b916 100%
+      ) !important;
+
+    box-shadow: 0 8px 25px rgba(245, 190, 30, .18);
+
+    z-index: 2 !important;
+  }
+
+  /* Холмы */
+  .hero-art .hill-1 {
+    position: absolute !important;
+
+    width: 125% !important;
+    height: 150px !important;
+
+    left: -28% !important;
+    bottom: -55px !important;
+
+    border-radius: 50% 50% 0 0 !important;
+    background: #79c96b !important;
+
+    transform: rotate(-3deg);
+
+    z-index: 1 !important;
+  }
+
+  .hero-art .hill-2 {
+    position: absolute !important;
+
+    width: 125% !important;
+    height: 125px !important;
+
+    right: -42% !important;
+    bottom: -25px !important;
+
+    border-radius: 50% 50% 0 0 !important;
+    background: #a6db78 !important;
+
+    transform: rotate(4deg);
+
+    z-index: 1 !important;
+  }
+
+  /* Три маленькие карточки */
+  .hero-art .card-float {
+    position: absolute !important;
+    z-index: 4 !important;
+
+    background: rgba(255,255,255,.96) !important;
+    border-radius: 14px !important;
+
+    box-shadow:
+      0 5px 16px rgba(38, 80, 60, .08) !important;
+  }
+
+  .hero-art .card-a {
+    left: 2% !important;
+    top: 78px !important;
+  }
+
+  .hero-art .card-b {
+    left: 28% !important;
+    top: 90px !important;
+  }
+
+  .hero-art .card-c {
+    left: 52% !important;
+    top: 80px !important;
+  }
+
+  /* Ромашка */
+  .hero-art .big-daisy {
+    position: absolute !important;
+
+    width: 175px !important;
+    height: 205px !important;
+
+    left: 50% !important;
+    bottom: -3px !important;
+
+    transform: translateX(-50%) !important;
+
+    z-index: 3 !important;
+  }
 }
